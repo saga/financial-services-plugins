@@ -45,6 +45,21 @@ before the fetch, so one endpoint can branch on a query param.
 See [bootstrap](bootstrap.md) for the request/response contract, JWT
 validation, and handler scaffolding.
 
+## MCP servers
+
+`mcp_servers` is a JSON array of customer-hosted MCP servers the add-in
+connects to directly. Each entry is `{url, label, headers?, discover?}` —
+`headers` present means static auth; absent triggers OAuth discovery. Values
+interpolate other config keys via `{{gateway_url}}`-style templates.
+
+Setting it here applies one list org-wide; per-user lists belong in
+[bootstrap](bootstrap.md#mcp_servers), which also has the full schema. The
+value is JSON inside a shell arg — single-quote it:
+
+```bash
+mcp_servers='[{"url":"{{gateway_url}}/deepwiki/mcp","label":"DeepWiki","headers":{"Authorization":"Bearer {{gateway_token}}"}}]'
+```
+
 ## Auto-connect
 
 Default: when all fields for a provider are set, users skip the connection form
