@@ -73,6 +73,14 @@ browser WebView). Leave it unset and no custom collector is configured.
 `key1=value1,key2=value2` format as the standard
 `OTEL_EXPORTER_OTLP_HEADERS` variable. URL-encode the value in the manifest.
 
+`otlp_resource_attributes` adds attributes to the OpenTelemetry Resource on
+every span, in the same `key1=value1,key2=value2` format as the standard
+`OTEL_RESOURCE_ATTRIBUTES` variable. Use this when your collector requires
+specific resource attributes for routing or attribution (e.g.
+`team.name=platform,deployment.environment=prod`). The add-in already sets
+`service.name`, `service.version`, and `git.sha`; values you provide here are
+merged on top.
+
 Setting these here applies one collector org-wide; per-user routing belongs in
 [bootstrap](bootstrap.md#telemetry) or extension attrs.
 

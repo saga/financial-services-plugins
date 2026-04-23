@@ -43,6 +43,10 @@ const KEYS = {
   bootstrap_url: { pattern: /^https:\/\//, hint: "HTTPS endpoint returning per-user config" },
   otlp_endpoint: { pattern: /^https:\/\//, hint: "OTLP/HTTP traces collector URL" },
   otlp_headers: { pattern: /./, hint: "comma-separated k=v pairs for the OTLP exporter" },
+  otlp_resource_attributes: {
+    pattern: /^([^=,\s]+=[^,]*)(,[^=,\s]+=[^,]*)*$/,
+    hint: "comma-separated k=v pairs added to the OTEL Resource (same format as OTEL_RESOURCE_ATTRIBUTES)",
+  },
   auto_connect: { pattern: /^[01]$/, hint: "0 shows form, 1 (or omit) auto-connects" },
   entra_sso: { pattern: /^[01]$/, hint: "1 enables Entra SSO (required for aws_role_arn)" },
   allow_1p: {

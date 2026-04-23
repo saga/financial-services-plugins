@@ -166,14 +166,18 @@ Vertex `:rawPredict` URL the add-in constructs. `"bedrock"` needs no extras.
 
 ```json
 "otlp_endpoint": "https://otel-collector.your-domain.com",
-"otlp_headers": "Authorization=Bearer {{gateway_token}}"
+"otlp_headers": "Authorization=Bearer {{gateway_token}}",
+"otlp_resource_attributes": "team.name={{team}},deployment.environment=prod"
 ```
 
 `otlp_endpoint` is the base HTTPS URL of an OpenTelemetry collector you
 operate; the add-in appends `/v1/traces` and posts OTLP/HTTP. `otlp_headers`
 uses the standard `key1=value1,key2=value2` format and interpolates like any
-other value. The collector must allow CORS from the add-in origin — see
-[above](#cors--every-url-needs-it).
+other value. `otlp_resource_attributes` uses the same format (matching the
+standard `OTEL_RESOURCE_ATTRIBUTES` variable) and is merged into the
+OpenTelemetry Resource on every span — use it when your collector requires
+specific resource attributes for routing or attribution. The collector must
+allow CORS from the add-in origin — see [above](#cors--every-url-needs-it).
 
 ### `inference_headers`
 
