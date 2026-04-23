@@ -1,0 +1,11 @@
+# Claude in Office Python Bootstrap 依赖包
+# Claude in Office Python Bootstrap 依赖包
+
+# FastAPI - 现代化、高性能的 Web 框架，用于构建 API
+fastapi
+
+# Uvicorn - ASGI 服务器，用于运行 FastAPI 应用
+uvicorn
+
+# PyJWT[crypto] - JWT（JSON Web Token）处理库，[crypto] 选项包含加密支持
+PyJWT[crypto]
