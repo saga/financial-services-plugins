@@ -1,0 +1,8 @@
+{
+  "name": "month-end-closer",
+  "version": "0.1.0",
+  "description": "应计项目、滚调表、差异说明 — 执行月末结账流程",
+  "author": {
+    "name": "Anthropic FSI"
+  }
+}

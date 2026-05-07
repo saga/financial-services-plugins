@@ -1,0 +1,8 @@
+{
+  "name": "kyc-screener",
+  "version": "0.1.0",
+  "description": "解析准入文件，运行规则引擎，标记合规缺口",
+  "author": {
+    "name": "Anthropic FSI"
+  }
+}

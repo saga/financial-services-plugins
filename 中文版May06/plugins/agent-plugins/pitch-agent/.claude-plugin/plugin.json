@@ -1,0 +1,8 @@
+{
+  "name": "pitch-agent",
+  "version": "0.1.0",
+  "description": "从可比公司、先例交易、LBO到品牌化推介演示文稿，端到端完成",
+  "author": {
+    "name": "Anthropic FSI"
+  }
+}
