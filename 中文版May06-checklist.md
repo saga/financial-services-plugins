@@ -199,11 +199,11 @@
 完成翻译后，在对应项后标记 `[x]`
 
 ### P0 项目
-- [ ] lbo-model
-- [ ] ppt-template-creator
-- [ ] operations (kyc-doc-parse, kyc-rules)
-- [ ] investment-banking/skills/buyer-list
-- [ ] investment-banking/skills/cim-builder
+- [x] lbo-model
+- [x] ppt-template-creator
+- [x] operations (kyc-doc-parse, kyc-rules)
+- [x] investment-banking/skills/buyer-list
+- [x] investment-banking/skills/cim-builder
 - [ ] investment-banking/skills/deal-tracker
 - [ ] investment-banking/skills/merger-model
 - [ ] investment-banking/skills/teaser
