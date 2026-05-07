@@ -1,228 +1,317 @@
 # 中文版翻译 Checklist
 
-> 对比日期：2026-04-23
+> 对比日期：2026-05-07
 > 源目录：`plugins/`
 > 目标目录：`中文版May06/`
 
 ---
 
-## ⚠️ 【严重】缺失的 Skills 目录（整目录缺失）
+## 📊 统计摘要
 
-以下 Skill 目录在 `plugins/` 中存在，但在 `中文版May06/` 中完全缺失：
-
-| # | 目录路径 | 状态 |
-|---|----------|------|
-| 1 | `vertical-plugins/financial-analysis/skills/lbo-model/` | ❌ 缺失 |
-| 2 | `vertical-plugins/financial-analysis/skills/ppt-template-creator/` | ❌ 缺失 |
-| 3 | `vertical-plugins/operations/` | ❌ 缺失 |
-| 4 | `vertical-plugins/investment-banking/skills/buyer-list/` | ❌ 缺失 |
-| 5 | `vertical-plugins/investment-banking/skills/cim-builder/` | ❌ 缺失 |
-| 6 | `vertical-plugins/investment-banking/skills/deal-tracker/` | ❌ 缺失 |
-| 7 | `vertical-plugins/investment-banking/skills/merger-model/` | ❌ 缺失 |
-| 8 | `vertical-plugins/investment-banking/skills/teaser/` | ❌ 缺失 |
-| 9 | `vertical-plugins/private-equity/skills/dd-checklist/` | ❌ 缺失 |
-| 10 | `vertical-plugins/private-equity/skills/dd-meeting-prep/` | ❌ 缺失 |
-| 11 | `vertical-plugins/private-equity/skills/deal-screening/` | ❌ 缺失 |
-| 12 | `vertical-plugins/private-equity/skills/ic-memo/` | ❌ 缺失 |
-| 13 | `vertical-plugins/private-equity/skills/portfolio-monitoring/` | ❌ 缺失 |
-| 14 | `vertical-plugins/private-equity/skills/value-creation-plan/` | ❌ 缺失 |
-| 15 | `vertical-plugins/wealth-management/skills/investment-proposal/` | ❌ 缺失 |
+| 类别 | 总数 (plugins) | 已翻译 (中文版May06) | 缺失 |
+|------|----------------|---------------------|------|
+| **agent-plugins** | 10个插件 | 0 | ❌ **全部缺失** |
+| **partner-built** | 2个插件 | 0 | ❌ **全部缺失** |
+| **vertical-plugins** | 6个模块 | 部分 | ⚠️ 部分缺失 |
+| **总计** | 约280+文件 | 约50个文件 | ❌ 约230+文件缺失 |
 
 ---
 
-## ⚠️ 【严重】缺失的 Commands 目录（整目录缺失）
+## ❌ 【严重】完全缺失的插件（整目录缺失）
 
-| # | 目录路径 | 状态 |
-|---|----------|------|
-| 1 | `vertical-plugins/investment-banking/skills/buyer-list/` | ❌ 缺失 |
-| 2 | `vertical-plugins/investment-banking/skills/cim-builder/` | ❌ 缺失 |
-| 3 | `vertical-plugins/investment-banking/skills/deal-tracker/` | ❌ 缺失 |
-| 4 | `vertical-plugins/investment-banking/skills/merger-model/` | ❌ 缺失 |
-| 5 | `vertical-plugins/investment-banking/skills/teaser/` | ❌ 缺失 |
-| 6 | `vertical-plugins/private-equity/commands/ic-memo.md` | ❌ 缺失 (文件) |
+### agent-plugins (10个插件全部缺失)
+
+| # | 插件名称 | 描述 | 缺失文件数 |
+|---|----------|------|------------|
+| 1 | **earnings-reviewer** | 财报审核代理 | 11个文件 |
+| 2 | **gl-reconciler** | 总账对账代理 | 6个文件 |
+| 3 | **kyc-screener** | KYC筛查代理 | 5个文件 |
+| 4 | **market-researcher** | 市场研究代理 | 8个文件 |
+| 5 | **meeting-prep-agent** | 会议准备代理 | 5个文件 |
+| 6 | **model-builder** | 模型构建代理 | 14个文件 |
+| 7 | **month-end-closer** | 月末结账代理 | 6个文件 |
+| 8 | **pitch-agent** | 推介材料代理 | 25个文件 |
+| 9 | **statement-auditor** | 报表审计代理 | 4个文件 |
+| 10 | **valuation-reviewer** | 估值审核代理 | 5个文件 |
+
+### partner-built (2个插件全部缺失)
+
+| # | 插件名称 | 描述 | 缺失文件数 |
+|---|----------|------|------------|
+| 1 | **lseg** | LSEG 合作伙伴插件 | 约10+文件 |
+| 2 | **spglobal** | S&P Global 合作伙伴插件 | 15个文件 |
 
 ---
 
-## 🔴 缺失的单个文件（高优先级）
+## ⚠️ 【高优先级】vertical-plugins 缺失内容
 
-### investment-banking
+### equity-research（股权研究）- 全部缺失
 
 | # | 文件路径 | 状态 |
 |---|----------|------|
-| 1 | `vertical-plugins/investment-banking/README.md` | ❌ 缺失 |
-| 2 | `vertical-plugins/investment-banking/skills/pitch-deck/reference/calculation-standards.md` | ❌ 缺失 |
-| 3 | `vertical-plugins/investment-banking/skills/pitch-deck/reference/formatting-standards.md` | ❌ 缺失 |
-| 4 | `vertical-plugins/investment-banking/skills/pitch-deck/reference/slide-templates.md` | ❌ 缺失 |
-| 5 | `vertical-plugins/investment-banking/skills/pitch-deck/reference/xml-reference.md` | ❌ 缺失 |
+| 1 | `.claude-plugin/plugin.json` | ❌ 缺失 |
+| 2 | `commands/catalysts.md` | ❌ 缺失 |
+| 3 | `commands/earnings-preview.md` | ❌ 缺失 |
+| 4 | `commands/earnings.md` | ❌ 缺失 |
+| 5 | `commands/initiate.md` | ❌ 缺失 |
+| 6 | `commands/model-update.md` | ❌ 缺失 |
+| 7 | `commands/morning-note.md` | ❌ 缺失 |
+| 8 | `commands/screen.md` | ❌ 缺失 |
+| 9 | `commands/sector.md` | ❌ 缺失 |
+| 10 | `commands/thesis.md` | ❌ 缺失 |
+| 11 | `hooks/hooks.json` | ❌ 缺失 |
+| 12 | `skills/catalyst-calendar/SKILL.md` | ❌ 缺失 |
+| 13 | `skills/earnings-analysis/SKILL.md` | ❌ 缺失 |
+| 14 | `skills/earnings-analysis/references/best-practices.md` | ❌ 缺失 |
+| 15 | `skills/earnings-analysis/references/report-structure.md` | ❌ 缺失 |
+| 16 | `skills/earnings-analysis/references/workflow.md` | ❌ 缺失 |
+| 17 | `skills/earnings-preview/SKILL.md` | ❌ 缺失 |
+| 18 | `skills/idea-generation/SKILL.md` | ❌ 缺失 |
+| 19 | `skills/initiating-coverage/SKILL.md` | ❌ 缺失 |
+| 20 | `skills/initiating-coverage/assets/quality-checklist.md` | ❌ 缺失 |
+| 21 | `skills/initiating-coverage/assets/report-template.md` | ❌ 缺失 |
+| 22 | `skills/initiating-coverage/references/task1-company-research.md` | ❌ 缺失 |
+| 23 | `skills/initiating-coverage/references/task2-financial-modeling.md` | ❌ 缺失 |
+| 24 | `skills/initiating-coverage/references/task3-valuation.md` | ❌ 缺失 |
+| 25 | `skills/initiating-coverage/references/task4-chart-generation.md` | ❌ 缺失 |
+| 26 | `skills/initiating-coverage/references/task5-report-assembly.md` | ❌ 缺失 |
+| 27 | `skills/initiating-coverage/references/valuation-methodologies.md` | ❌ 缺失 |
+| 28 | `skills/model-update/SKILL.md` | ❌ 缺失 |
+| 29 | `skills/morning-note/SKILL.md` | ❌ 缺失 |
+| 30 | `skills/sector-overview/SKILL.md` | ❌ 缺失 |
+| 31 | `skills/thesis-tracker/SKILL.md` | ❌ 缺失 |
 
-### private-equity
+### financial-analysis（财务分析）- 部分缺失
 
-| # | 文件路径 | 状态 |
-|---|----------|------|
-| 6 | `vertical-plugins/private-equity/commands/ic-memo.md` | ❌ 缺失 |
-
-### 其他
-
-| # | 文件路径 | 状态 |
-|---|----------|------|
-| 7 | `vertical-plugins/financial-analysis/skills/competitive-analysis/references/frameworks.md` | ❌ 缺失 |
-| 8 | `vertical-plugins/financial-analysis/skills/competitive-analysis/references/schemas.md` | ❌ 缺失 |
-
----
-
-## 🟡 缺失的 References 子目录
-
-| # | 目录路径 | 状态 |
-|---|----------|------|
-| 1 | `vertical-plugins/investment-banking/skills/pitch-deck/reference/` | ❌ 缺失 |
-| 2 | `vertical-plugins/financial-analysis/skills/competitive-analysis/references/` | ❌ 缺失 |
-
----
-
-## 🟢 已存在（无需操作）
-
-以下文件在两个目录中都存在，不需要额外操作：
-
-### financial-analysis (skills)
-- [x] `3-statement-model/SKILL.md`
-- [x] `3-statement-model/references/formatting.md`
-- [x] `3-statement-model/references/formulas.md`
-- [x] `3-statement-model/references/sec-filings.md`
-- [x] `audit-xls/SKILL.md`
-- [x] `clean-data-xls/SKILL.md`
-- [x] `competitive-analysis/SKILL.md`
-- [x] `comps-analysis/SKILL.md`
-- [x] `dcf-model/SKILL.md`
-- [x] `dcf-model/TROUBLESHOOTING.md`
-- [x] `deck-refresh/SKILL.md`
-- [x] `ib-check-deck/SKILL.md`
-- [x] `ib-check-deck/references/ib-terminology.md`
-- [x] `ib-check-deck/references/report-format.md`
-- [x] `pptx-author/SKILL.md`
-- [x] `skill-creator/SKILL.md`
-- [x] `skill-creator/references/output-patterns.md`
-- [x] `skill-creator/references/workflows.md`
-- [x] `xlsx-author/SKILL.md`
-
-### financial-analysis (commands)
+**已存在的文件：**
 - [x] `commands/lbo.md`
 - [x] `commands/ppt-template.md`
+- [x] `skills/3-statement-model/SKILL.md`
+- [x] `skills/3-statement-model/references/formatting.md`
+- [x] `skills/3-statement-model/references/formulas.md`
+- [x] `skills/3-statement-model/references/sec-filings.md`
+- [x] `skills/audit-xls/SKILL.md`
+- [x] `skills/clean-data-xls/SKILL.md`
+- [x] `skills/competitive-analysis/SKILL.md`
+- [x] `skills/comps-analysis/SKILL.md`
+- [x] `skills/dcf-model/SKILL.md`
+- [x] `skills/dcf-model/TROUBLESHOOTING.md`
+- [x] `skills/deck-refresh/SKILL.md`
+- [x] `skills/ib-check-deck/SKILL.md`
+- [x] `skills/ib-check-deck/references/ib-terminology.md`
+- [x] `skills/ib-check-deck/references/report-format.md`
+- [x] `skills/pptx-author/SKILL.md`
+- [x] `skills/skill-creator/SKILL.md`
+- [x] `skills/skill-creator/references/output-patterns.md`
+- [x] `skills/skill-creator/references/workflows.md`
+- [x] `skills/xlsx-author/SKILL.md`
 
-### fund-admin (skills)
-- [x] `fund-admin/skills/accrual-schedule/SKILL.md`
-- [x] `fund-admin/skills/break-trace/SKILL.md`
-- [x] `fund-admin/skills/gl-recon/SKILL.md`
-- [x] `fund-admin/skills/nav-tieout/SKILL.md`
-- [x] `fund-admin/skills/roll-forward/SKILL.md`
-- [x] `fund-admin/skills/variance-commentary/SKILL.md`
+**缺失的文件：**
 
-### investment-banking (commands)
-- [x] `investment-banking/commands/buyer-list.md`
-- [x] `investment-banking/commands/cim.md`
-- [x] `investment-banking/commands/deal-tracker.md`
-- [x] `investment-banking/commands/merger-model.md`
-- [x] `investment-banking/commands/one-pager.md`
-- [x] `investment-banking/commands/process-letter.md`
-- [x] `investment-banking/commands/teaser.md`
+| # | 文件路径 | 状态 |
+|---|----------|------|
+| 1 | `.claude-plugin/plugin.json` | ❌ 缺失 |
+| 2 | `.mcp.json` | ❌ 缺失 |
+| 3 | `commands/3-statement-model.md` | ❌ 缺失 |
+| 4 | `commands/competitive-analysis.md` | ❌ 缺失 |
+| 5 | `commands/comps.md` | ❌ 缺失 |
+| 6 | `commands/dcf.md` | ❌ 缺失 |
+| 7 | `commands/debug-model.md` | ❌ 缺失 |
+| 8 | `hooks/hooks.json` | ❌ 缺失 |
+| 9 | `skills/competitive-analysis/references/frameworks.md` | ❌ 缺失 |
+| 10 | `skills/competitive-analysis/references/schemas.md` | ❌ 缺失 |
+| 11 | `skills/dcf-model/requirements.txt` | ❌ 缺失 |
+| 12 | `skills/dcf-model/scripts/validate_dcf.py` | ❌ 缺失 |
+| 13 | `skills/ib-check-deck/scripts/extract_numbers.py` | ❌ 缺失 |
+| 14 | `skills/skill-creator/LICENSE.txt` | ❌ 缺失 |
+| 15 | `skills/skill-creator/scripts/init_skill.py` | ❌ 缺失 |
+| 16 | `skills/skill-creator/scripts/package_skill.py` | ❌ 缺失 |
+| 17 | `skills/skill-creator/scripts/quick_validate.py` | ❌ 缺失 |
 
-### investment-banking (skills)
-- [x] `investment-banking/skills/datapack-builder/SKILL.md`
-- [x] `investment-banking/skills/pitch-deck/SKILL.md`
-- [x] `investment-banking/skills/process-letter/SKILL.md`
-- [x] `investment-banking/skills/strip-profile/SKILL.md`
+### fund-admin（基金管理）- 全部缺失
 
-### private-equity (commands)
-- [x] `private-equity/commands/ai-readiness.md`
-- [x] `private-equity/commands/dd-checklist.md`
-- [x] `private-equity/commands/dd-prep.md`
-- [x] `private-equity/commands/portfolio.md`
-- [x] `private-equity/commands/returns.md`
-- [x] `private-equity/commands/screen-deal.md`
-- [x] `private-equity/commands/source.md`
-- [x] `private-equity/commands/unit-economics.md`
-- [x] `private-equity/commands/value-creation.md`
+| # | 文件路径 | 状态 |
+|---|----------|------|
+| 1 | `.claude-plugin/plugin.json` | ❌ 缺失 |
+| 2 | `skills/accrual-schedule/SKILL.md` | ❌ 缺失 |
+| 3 | `skills/break-trace/SKILL.md` | ❌ 缺失 |
+| 4 | `skills/gl-recon/SKILL.md` | ❌ 缺失 |
+| 5 | `skills/nav-tieout/SKILL.md` | ❌ 缺失 |
+| 6 | `skills/roll-forward/SKILL.md` | ❌ 缺失 |
+| 7 | `skills/variance-commentary/SKILL.md` | ❌ 缺失 |
 
-### private-equity (skills)
-- [x] `private-equity/skills/deal-sourcing/SKILL.md`
-- [x] `private-equity/skills/returns-analysis/SKILL.md`
+### investment-banking（投资银行）- 部分缺失
 
-### wealth-management (commands)
-- [x] `wealth-management/commands/client-report.md`
-- [x] `wealth-management/commands/client-review.md`
-- [x] `wealth-management/commands/financial-plan.md`
-- [x] `wealth-management/commands/proposal.md`
-- [x] `wealth-management/commands/rebalance.md`
-- [x] `wealth-management/commands/tlh.md`
+**已存在的文件：**
+- [x] `commands/buyer-list.md`
+- [x] `commands/cim.md`
+- [x] `commands/deal-tracker.md`
+- [x] `commands/merger-model.md`
+- [x] `commands/one-pager.md`
+- [x] `commands/process-letter.md`
+- [x] `commands/teaser.md`
+- [x] `skills/datapack-builder/SKILL.md`
+- [x] `skills/pitch-deck/SKILL.md`
+- [x] `skills/process-letter/SKILL.md`
+- [x] `skills/strip-profile/SKILL.md`
 
-### wealth-management (skills)
-- [x] `wealth-management/skills/client-report/SKILL.md`
-- [x] `wealth-management/skills/client-review/SKILL.md`
-- [x] `wealth-management/skills/financial-plan/SKILL.md`
-- [x] `wealth-management/skills/portfolio-rebalance/SKILL.md`
-- [x] `wealth-management/skills/tax-loss-harvesting/SKILL.md`
+**缺失的文件：**
+
+| # | 文件路径 | 状态 |
+|---|----------|------|
+| 1 | `.claude-plugin/plugin.json` | ❌ 缺失 |
+| 2 | `.claude/investment-banking.local.md.example` | ❌ 缺失 |
+| 3 | `.gitignore` | ❌ 缺失 |
+| 4 | `.mcp.json` | ❌ 缺失 |
+| 5 | `README.md` | ❌ 缺失 |
+| 6 | `hooks/hooks.json` | ❌ 缺失 |
+| 7 | `skills/deal-tracker/SKILL.md` | ❌ 缺失 |
+| 8 | `skills/merger-model/SKILL.md` | ❌ 缺失 |
+| 9 | `skills/pitch-deck/reference/calculation-standards.md` | ❌ 缺失 |
+| 10 | `skills/pitch-deck/reference/formatting-standards.md` | ❌ 缺失 |
+| 11 | `skills/pitch-deck/reference/slide-templates.md` | ❌ 缺失 |
+| 12 | `skills/pitch-deck/reference/xml-reference.md` | ❌ 缺失 |
+| 13 | `skills/teaser/SKILL.md` | ❌ 缺失 |
+
+### operations（运营）- 全部缺失
+
+| # | 文件路径 | 状态 |
+|---|----------|------|
+| 1 | `.claude-plugin/plugin.json` | ❌ 缺失 |
+
+### private-equity（私募股权）- 部分缺失
+
+**已存在的文件：**
+- [x] `commands/ai-readiness.md`
+- [x] `commands/dd-checklist.md`
+- [x] `commands/dd-prep.md`
+- [x] `commands/portfolio.md`
+- [x] `commands/returns.md`
+- [x] `commands/screen-deal.md`
+- [x] `commands/source.md`
+- [x] `commands/unit-economics.md`
+- [x] `commands/value-creation.md`
+- [x] `skills/deal-sourcing/SKILL.md`
+- [x] `skills/returns-analysis/SKILL.md`
+
+**缺失的文件：**
+
+| # | 文件路径 | 状态 |
+|---|----------|------|
+| 1 | `.claude-plugin/plugin.json` | ❌ 缺失 |
+| 2 | `.mcp.json` | ❌ 缺失 |
+| 3 | `commands/ic-memo.md` | ❌ 缺失 |
+| 4 | `hooks/hooks.json` | ❌ 缺失 |
+| 5 | `skills/ai-readiness/SKILL.md` | ❌ 缺失 |
+| 6 | `skills/dd-checklist/SKILL.md` | ❌ 缺失 |
+| 7 | `skills/dd-meeting-prep/SKILL.md` | ❌ 缺失 |
+| 8 | `skills/deal-screening/SKILL.md` | ❌ 缺失 |
+| 9 | `skills/ic-memo/SKILL.md` | ❌ 缺失 |
+| 10 | `skills/portfolio-monitoring/SKILL.md` | ❌ 缺失 |
+| 11 | `skills/unit-economics/SKILL.md` | ❌ 缺失 |
+| 12 | `skills/value-creation-plan/SKILL.md` | ❌ 缺失 |
+
+### wealth-management（财富管理）- 部分缺失
+
+**已存在的文件：**
+- [x] `commands/client-report.md`
+- [x] `commands/client-review.md`
+- [x] `commands/financial-plan.md`
+- [x] `commands/proposal.md`
+- [x] `commands/rebalance.md`
+- [x] `commands/tlh.md`
+- [x] `skills/client-report/SKILL.md`
+- [x] `skills/client-review/SKILL.md`
+- [x] `skills/financial-plan/SKILL.md`
+- [x] `skills/portfolio-rebalance/SKILL.md`
+- [x] `skills/tax-loss-harvesting/SKILL.md`
+
+**缺失的文件：**
+
+| # | 文件路径 | 状态 |
+|---|----------|------|
+| 1 | `.claude-plugin/plugin.json` | ❌ 缺失 |
+| 2 | `hooks/hooks.json` | ❌ 缺失 |
+| 3 | `skills/investment-proposal/SKILL.md` | ❌ 缺失 |
 
 ---
 
-## 📊 统计汇总
+## 🎯 翻译优先级排序
 
-| 类别 | 数量 |
-|------|------|
-| 缺失的 Skills 目录 | 15 |
-| 缺失的 Commands 文件 | 6+ |
-| 缺失的单个文件 | 8 |
-| 已存在（无需操作） | 49+ |
+### P0 - 紧急（立即处理）
+1. **agent-plugins** - 10个完整插件全部缺失（约90+文件）
+2. **partner-built** - 2个合作伙伴插件全部缺失（约25+文件）
+3. **vertical-plugins/equity-research** - 全部31个文件缺失
 
----
+### P1 - 高优先级
+4. **vertical-plugins/fund-admin** - 全部7个文件缺失
+5. **vertical-plugins/operations** - 全部缺失
+6. **vertical-plugins/investment-banking** - 缺失13个文件（含pitch-deck参考文件）
+7. **vertical-plugins/private-equity** - 缺失12个文件（含IC备忘录）
 
-## 🎯 翻译优先级
-
-### P0 - 立即处理（整目录缺失）
-1. `vertical-plugins/financial-analysis/skills/lbo-model/` - LBO模型
-2. `vertical-plugins/financial-analysis/skills/ppt-template-creator/` - PPT模板创建器
-3. `vertical-plugins/operations/` - Operations模块
-4. `vertical-plugins/investment-banking/skills/` 下的 buyer-list, cim-builder, deal-tracker, merger-model, teaser
-5. `vertical-plugins/private-equity/skills/` 下的 dd-checklist, dd-meeting-prep, deal-screening, ic-memo, portfolio-monitoring, value-creation-plan
-6. `vertical-plugins/wealth-management/skills/investment-proposal/`
-
-### P1 - 高优先级（pitch-deck reference文件）
-1. `vertical-plugins/investment-banking/skills/pitch-deck/reference/` 下的4个文件
-
-### P2 - 中优先级（单个缺失文件）
-1. `vertical-plugins/investment-banking/README.md`
-2. `vertical-plugins/private-equity/commands/ic-memo.md`
-3. `vertical-plugins/financial-analysis/skills/competitive-analysis/references/` 下的2个文件
+### P2 - 中优先级
+8. **vertical-plugins/financial-analysis** - 缺失17个文件（主要是scripts和配置）
+9. **vertical-plugins/wealth-management** - 缺失3个文件
 
 ---
 
-## ✅ 翻译完成确认
+## ✅ 翻译完成追踪
 
-完成翻译后，在对应项后标记 `[x]`
+### agent-plugins
+- [ ] earnings-reviewer (11文件)
+- [ ] gl-reconciler (6文件)
+- [ ] kyc-screener (5文件)
+- [ ] market-researcher (8文件)
+- [ ] meeting-prep-agent (5文件)
+- [ ] model-builder (14文件)
+- [ ] month-end-closer (6文件)
+- [ ] pitch-agent (25文件)
+- [ ] statement-auditor (4文件)
+- [ ] valuation-reviewer (5文件)
 
-### P0 项目
-- [x] lbo-model
-- [x] ppt-template-creator
-- [x] operations (kyc-doc-parse, kyc-rules)
-- [x] investment-banking/skills/buyer-list
-- [x] investment-banking/skills/cim-builder
-- [ ] investment-banking/skills/deal-tracker
-- [ ] investment-banking/skills/merger-model
-- [ ] investment-banking/skills/teaser
-- [ ] private-equity/skills/dd-checklist
-- [ ] private-equity/skills/dd-meeting-prep
-- [ ] private-equity/skills/deal-screening
-- [ ] private-equity/skills/ic-memo
-- [ ] private-equity/skills/portfolio-monitoring
-- [ ] private-equity/skills/value-creation-plan
-- [ ] wealth-management/skills/investment-proposal
+### partner-built
+- [ ] lseg
+- [ ] spglobal
 
-### P1 项目
-- [ ] pitch-deck/reference/calculation-standards.md
-- [ ] pitch-deck/reference/formatting-standards.md
-- [ ] pitch-deck/reference/slide-templates.md
-- [ ] pitch-deck/reference/xml-reference.md
+### vertical-plugins
+- [ ] equity-research (31文件)
+- [ ] financial-analysis (17文件)
+- [ ] fund-admin (7文件)
+- [ ] investment-banking (13文件)
+- [ ] operations
+- [ ] private-equity (12文件)
+- [ ] wealth-management (3文件)
 
-### P2 项目
-- [ ] investment-banking/README.md
-- [ ] private-equity/commands/ic-memo.md
-- [ ] financial-analysis/skills/competitive-analysis/references/frameworks.md
-- [ ] financial-analysis/skills/competitive-analysis/references/schemas.md
+---
+
+## 📁 目录结构对比
+
+```
+plugins/
+├── agent-plugins/                    ❌ 中文版May06缺失
+│   ├── earnings-reviewer/
+│   ├── gl-reconciler/
+│   ├── kyc-screener/
+│   ├── market-researcher/
+│   ├── meeting-prep-agent/
+│   ├── model-builder/
+│   ├── month-end-closer/
+│   ├── pitch-agent/
+│   ├── statement-auditor/
+│   └── valuation-reviewer/
+├── partner-built/                    ❌ 中文版May06缺失
+│   ├── lseg/
+│   └── spglobal/
+└── vertical-plugins/                 ⚠️ 部分缺失
+    ├── equity-research/             ❌ 全部缺失
+    ├── financial-analysis/           ✅ 部分存在
+    ├── fund-admin/                  ❌ 全部缺失
+    ├── investment-banking/          ✅ 部分存在
+    ├── operations/                  ❌ 全部缺失
+    ├── private-equity/              ✅ 部分存在
+    └── wealth-management/           ✅ 部分存在
+```
+
+---
+
+> 📝 **备注**：此checklist基于2026-05-07的目录对比。建议定期重新运行对比以更新状态。

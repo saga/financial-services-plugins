@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "id": "b48ce1cf",
+      "cron": "*/15 * * * *",
+      "prompt": "/compact",
+      "createdAt": 1778143793337,
+      "recurring": true,
+      "createdBySessionId": "ab04f789-86bb-4f77-9816-9f7e41119fc1",
+      "createdByPid": 19254,
+      "createdByProcStart": "Wed May  6 23:26:49 2026"
+    }
+  ]
+}
