@@ -3,7 +3,7 @@
 > 对比日期：2026-05-07
 > 源目录：`plugins/`
 > 目标目录：`中文版May06/`
-> 缺失文件总数：**260个**
+> 缺失文件总数：**256个**
 
 ---
 
@@ -11,42 +11,42 @@
 
 | 类别 | 插件/模块数 | 缺失文件数 | 状态 |
 |------|-------------|------------|------|
-| **agent-plugins** | 10个 | ~89 | ❌ 全部缺失 |
-| **partner-built** | 2个 | ~30 | ❌ 全部缺失 |
-| **vertical-plugins** | 6个 | ~141 | ⚠️ 部分缺失 |
-| **总计** | 18个 | **260个** | ❌ 约18%完成 |
+| **agent-plugins** | 10个 | ~83 | ❌ 全部缺失 |
+| **partner-built** | 2个 | 31 | ❌ 全部缺失 |
+| **vertical-plugins** | 7个 | 138 | ⚠️ 部分缺失 |
+| **总计** | 19个 | **256个** | ❌ |
 
 ---
 
 ## ❌ 【P0 - 紧急】整目录缺失
 
-### agent-plugins (10个插件 - 约89个文件)
+### agent-plugins (10个插件 - 83个文件)
 
 | # | 插件名称 | 描述 | 缺失文件数 |
 |---|----------|------|------------|
 | 1 | **earnings-reviewer** | 财报审核代理 | 11 |
 | 2 | **gl-reconciler** | 总账对账代理 | 6 |
 | 3 | **kyc-screener** | KYC筛查代理 | 2 |
-| 4 | **market-researcher** | 市场研究代理 | 5 |
-| 5 | **meeting-prep-agent** | 会议准备代理 | 6 |
+| 4 | **market-researcher** | 市场研究代理 | 3 |
+| 5 | **meeting-prep-agent** | 会议准备代理 | 5 |
 | 6 | **model-builder** | 模型构建代理 | 14 |
 | 7 | **month-end-closer** | 月末结账代理 | 7 |
 | 8 | **pitch-agent** | 推介材料代理 | 25 |
-| 9 | **statement-auditor** | 报表审计代理 | 4 |
-| 10 | **valuation-reviewer** | 估值审核代理 | 9 |
+| 9 | **statement-auditor** | 报表审计代理 | 5 |
+| 10 | **valuation-reviewer** | 估值审核代理 | 5 |
 
-### partner-built (2个插件 - 约30个文件)
+### partner-built (2个插件 - 31个文件)
 
 | # | 插件名称 | 描述 | 缺失文件数 |
 |---|----------|------|------------|
-| 1 | **lseg** | LSEG合作伙伴插件 | ~15 |
+| 1 | **lseg** | LSEG合作伙伴插件 | 16 |
 | 2 | **spglobal** | S&P Global合作伙伴插件 | 15 |
 
 ---
 
 ## ⚠️ 【P1 - 高优先级】vertical-plugins 缺失内容
 
-### 1. equity-research（股权研究）- 全部31个文件缺失
+### 1. equity-research（股权研究）- 31个文件
 
 ```
 vertical-plugins/equity-research/
@@ -81,42 +81,34 @@ vertical-plugins/equity-research/
     │       ├── task1-company-research.md              ❌
     │       ├── task2-financial-modeling.md            ❌
     │       ├── task3-valuation.md                     ❌
-    │       ├── task4-chart-generation.md             ❌
+    │       ├── task4-chart-generation.md              ❌
     │       ├── task5-report-assembly.md               ❌
     │       └── valuation-methodologies.md             ❌
     ├── model-update/SKILL.md                          ❌
     ├── morning-note/SKILL.md                          ❌
-    ├── sector-overview/SKILL.md                      ❌
+    ├── sector-overview/SKILL.md                        ❌
     └── thesis-tracker/SKILL.md                        ❌
 ```
 
----
+### 2. fund-admin（基金管理）- 7个文件
 
-### 2. fund-admin（基金管理）- 全部7个文件缺失
+| 文件路径 |
+|----------|
+| `vertical-plugins/fund-admin/.claude-plugin/plugin.json` |
+| `vertical-plugins/fund-admin/skills/accrual-schedule/SKILL.md` |
+| `vertical-plugins/fund-admin/skills/break-trace/SKILL.md` |
+| `vertical-plugins/fund-admin/skills/gl-recon/SKILL.md` |
+| `vertical-plugins/fund-admin/skills/nav-tieout/SKILL.md` |
+| `vertical-plugins/fund-admin/skills/roll-forward/SKILL.md` |
+| `vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md` |
 
-| 文件路径 | 类型 |
-|----------|------|
-| `vertical-plugins/fund-admin/.claude-plugin/plugin.json` | 配置 |
-| `vertical-plugins/fund-admin/skills/accrual-schedule/SKILL.md` | 技能 |
-| `vertical-plugins/fund-admin/skills/break-trace/SKILL.md` | 技能 |
-| `vertical-plugins/fund-admin/skills/gl-recon/SKILL.md` | 技能 |
-| `vertical-plugins/fund-admin/skills/nav-tieout/SKILL.md` | 技能 |
-| `vertical-plugins/fund-admin/skills/roll-forward/SKILL.md` | 技能 |
-| `vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md` | 技能 |
+### 3. operations（运营）- 1个文件
 
----
+| 文件路径 |
+|----------|
+| `vertical-plugins/operations/.claude-plugin/plugin.json` |
 
-### 3. operations（运营）- 全部缺失
-
-| 文件路径 | 类型 |
-|----------|------|
-| `vertical-plugins/operations/.claude-plugin/plugin.json` | 配置 |
-
----
-
-### 4. investment-banking（投资银行）- 缺失20个文件
-
-**缺失文件清单：**
+### 4. investment-banking（投资银行）- 24个文件
 
 | # | 文件路径 |
 |---|----------|
@@ -145,11 +137,7 @@ vertical-plugins/equity-research/
 | 23 | `skills/strip-profile/SKILL.md` |
 | 24 | `skills/teaser/SKILL.md` |
 
----
-
-### 5. private-equity（私募股权）- 缺失22个文件
-
-**缺失文件清单：**
+### 5. private-equity（私募股权）- 23个文件
 
 | # | 文件路径 |
 |---|----------|
@@ -177,11 +165,7 @@ vertical-plugins/equity-research/
 | 22 | `skills/unit-economics/SKILL.md` |
 | 23 | `skills/value-creation-plan/SKILL.md` |
 
----
-
-### 6. financial-analysis（财务分析）- 缺失20个文件
-
-**缺失文件清单：**
+### 6. financial-analysis（财务分析）- 38个文件
 
 | # | 文件路径 |
 |---|----------|
@@ -224,11 +208,7 @@ vertical-plugins/equity-research/
 | 37 | `skills/skill-creator/scripts/quick_validate.py` |
 | 38 | `skills/xlsx-author/SKILL.md` |
 
----
-
-### 7. wealth-management（财富管理）- 缺失13个文件
-
-**缺失文件清单：**
+### 7. wealth-management（财富管理）- 14个文件
 
 | # | 文件路径 |
 |---|----------|
@@ -254,9 +234,9 @@ vertical-plugins/equity-research/
 ### P0 - 紧急
 | 优先级 | 模块 | 缺失文件数 |
 |--------|------|------------|
-| 1 | agent-plugins (全部10个插件) | ~89 |
-| 2 | partner-built/lseg | ~15 |
-| 3 | partner-built/spglobal | 15 |
+| 1 | agent-plugins (10个插件) | 83 |
+| 2 | partner-built/spglobal | 15 |
+| 3 | partner-built/lseg | 16 |
 | 4 | vertical-plugins/equity-research | 31 |
 
 ### P1 - 高优先级
@@ -283,18 +263,18 @@ vertical-plugins/equity-research/
 | earnings-reviewer | 11 | [ ] 0% |
 | gl-reconciler | 6 | [ ] 0% |
 | kyc-screener | 2 | [ ] 0% |
-| market-researcher | 5 | [ ] 0% |
-| meeting-prep-agent | 6 | [ ] 0% |
+| market-researcher | 3 | [ ] 0% |
+| meeting-prep-agent | 5 | [ ] 0% |
 | model-builder | 14 | [ ] 0% |
 | month-end-closer | 7 | [ ] 0% |
 | pitch-agent | 25 | [ ] 0% |
-| statement-auditor | 4 | [ ] 0% |
-| valuation-reviewer | 9 | [ ] 0% |
+| statement-auditor | 5 | [ ] 0% |
+| valuation-reviewer | 5 | [ ] 0% |
 
 ### partner-built
 | 插件 | 文件数 | 进度 |
 |------|--------|------|
-| lseg | ~15 | [ ] 0% |
+| lseg | 16 | [ ] 0% |
 | spglobal | 15 | [ ] 0% |
 
 ### vertical-plugins
@@ -314,7 +294,7 @@ vertical-plugins/equity-research/
 
 ```
 plugins/
-├── agent-plugins/                    ❌ 全部缺失 (10个插件)
+├── agent-plugins/                    ❌ 全部缺失 (10个插件, 83文件)
 │   ├── earnings-reviewer/            ❌
 │   ├── gl-reconciler/                ❌
 │   ├── kyc-screener/                 ❌
@@ -326,11 +306,11 @@ plugins/
 │   ├── statement-auditor/            ❌
 │   └── valuation-reviewer/           ❌
 │
-├── partner-built/                    ❌ 全部缺失 (2个插件)
+├── partner-built/                    ❌ 全部缺失 (2个插件, 31文件)
 │   ├── lseg/                         ❌
 │   └── spglobal/                     ❌
 │
-└── vertical-plugins/                 ⚠️ 部分缺失
+└── vertical-plugins/                 ⚠️ 部分缺失 (7个模块, 138文件)
     ├── equity-research/             ❌ 全部缺失 (31文件)
     ├── financial-analysis/          ❌ 缺失38个文件
     ├── fund-admin/                  ❌ 全部缺失 (7文件)
@@ -342,5 +322,4 @@ plugins/
 
 ---
 
-> 📝 **备注**：此checklist基于2026-05-07的目录对比，共发现**260个缺失文件**。
-> 总文件数约300个，已翻译约40个，完成率约**13%**。
+> 📝 **备注**：此checklist基于2026-05-07的目录对比，共发现**256个缺失文件**。
