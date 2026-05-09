@@ -1,7 +1,7 @@
 {
   "name": "gl-reconciler",
   "version": "0.1.0",
-  "description": "总账与子账跨资产类别对账，发现差异并生成异常报告",
+  "description": "查找差异、追溯根本原因、生成审批报告",
   "author": {
     "name": "Anthropic FSI"
   }

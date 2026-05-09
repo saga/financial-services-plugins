@@ -1,7 +1,7 @@
 {
   "name": "earnings-reviewer",
   "version": "0.1.0",
-  "description": "从财报电话会议和申报文件到模型更新再到笔记草稿的一站式处理",
+  "description": "财报电话会议和文件到模型更新到纪要草稿",
   "author": {
     "name": "Anthropic FSI"
   }
