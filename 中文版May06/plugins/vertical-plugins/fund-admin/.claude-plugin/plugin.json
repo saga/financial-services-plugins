@@ -1,0 +1,8 @@
+{
+  "name": "fund-admin",
+  "version": "0.1.0",
+  "description": "基金管理和财务运营技能：总账对账、差额追踪、应计费用、滚动结转、差异分析、资产净值核对",
+  "author": {
+    "name": "Anthropic FSI"
+  }
+}
