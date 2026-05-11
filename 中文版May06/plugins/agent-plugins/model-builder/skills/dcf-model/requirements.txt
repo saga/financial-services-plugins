@@ -1,0 +1,7 @@
+# DCF模型构建器 - Python依赖
+
+# Excel文件处理
+openpyxl>=3.0.0
+
+# HTTP请求
+requests>=2.28.0
