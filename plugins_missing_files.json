@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "plugins_total": 228,
+    "zh_plugins_total": 231,
+    "mac_total": 11,
+    "zh_mac_total": 11,
+    "missing_plugins": 0,
+    "missing_mac": 0,
+    "extra_zh": 3,
+    "extra_zh_mac": 0,
+    "plugins_translation_complete": true,
+    "mac_translation_complete": true
+  },
+  "missing_plugins_files": [],
+  "missing_mac_files": [],
+  "extra_zh_files": [
+    {
+      "file_path": "partner-built/spglobal/skills/earnings-preview-beta/references/earnings-preview-framework.md",
+      "category": "partner-built",
+      "subcategory": "spglobal",
+      "filename": "earnings-preview-framework.md",
+      "type": "中文版多余",
+      "status": "需确认"
+    },
+    {
+      "file_path": "vertical-plugins/financial-analysis/commands/ib-check-deck.md",
+      "category": "vertical-plugins",
+      "subcategory": "financial-analysis",
+      "filename": "ib-check-deck.md",
+      "type": "中文版多余",
+      "status": "需确认"
+    },
+    {
+      "file_path": "vertical-plugins/financial-analysis/skills/check-model/SKILL.md",
+      "category": "vertical-plugins",
+      "subcategory": "financial-analysis",
+      "filename": "SKILL.md",
+      "type": "中文版多余",
+      "status": "需确认"
+    }
+  ],
+  "extra_zh_mac_files": []
+}
