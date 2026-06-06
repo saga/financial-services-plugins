@@ -1,0 +1,681 @@
+{
+  "summary": {
+    "total_files": 253,
+    "has_appendix": 108,
+    "missing_appendix": 145,
+    "appendix_coverage_rate": 42.69
+  },
+  "missing_files": [
+ 
+    {
+      "file_path": "plugins/partner-built/spglobal/README.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/README.md",
+      "status": "已完成 (2026-06-07)"
+    },
+    {
+      "file_path": "plugins/partner-built/spglobal/skills/funding-digest/references/sector-seeds.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/skills/funding-digest/references/sector-seeds.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/spglobal/skills/earnings-preview-beta/report-template.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/skills/earnings-preview-beta/report-template.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/spglobal/skills/earnings-preview-beta/references/earnings-preview-framework.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/skills/earnings-preview-beta/references/earnings-preview-framework.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/spglobal/skills/tear-sheet/references/corp-dev.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/skills/tear-sheet/references/corp-dev.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/spglobal/skills/tear-sheet/references/equity-research.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/skills/tear-sheet/references/equity-research.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/spglobal/skills/tear-sheet/references/sales-bd.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/skills/tear-sheet/references/sales-bd.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/spglobal/skills/tear-sheet/references/ib-ma.md",
+      "full_path": "中文版/plugins/partner-built/spglobal/skills/tear-sheet/references/ib-ma.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/README.md",
+      "full_path": "中文版/plugins/partner-built/lseg/README.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/CONNECTORS.md",
+      "full_path": "中文版/plugins/partner-built/lseg/CONNECTORS.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/analyze-bond-basis.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/analyze-bond-basis.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/analyze-swap-curve.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/analyze-swap-curve.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/analyze-fx-carry.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/analyze-fx-carry.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/research-equity.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/research-equity.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/review-fi-portfolio.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/review-fi-portfolio.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/analyze-bond-rv.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/analyze-bond-rv.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/analyze-option-vol.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/analyze-option-vol.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/commands/macro-rates.md",
+      "full_path": "中文版/plugins/partner-built/lseg/commands/macro-rates.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/fx-carry-trade/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/fx-carry-trade/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/equity-research/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/equity-research/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/fixed-income-portfolio/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/fixed-income-portfolio/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/bond-futures-basis/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/bond-futures-basis/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/swap-curve-strategy/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/swap-curve-strategy/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/bond-relative-value/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/bond-relative-value/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/macro-rates-monitor/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/macro-rates-monitor/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/partner-built/lseg/skills/option-vol-analysis/SKILL.md",
+      "full_path": "中文版/plugins/partner-built/lseg/skills/option-vol-analysis/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/portfolio.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/portfolio.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/source.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/source.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/dd-checklist.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/dd-checklist.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/unit-economics.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/unit-economics.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/value-creation.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/value-creation.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/screen-deal.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/screen-deal.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/returns.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/returns.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/ai-readiness.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/ai-readiness.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/commands/dd-prep.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/commands/dd-prep.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/skills/deal-sourcing/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/skills/deal-sourcing/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/private-equity/skills/returns-analysis/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/private-equity/skills/returns-analysis/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/comps.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/comps.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/competitive-analysis.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/competitive-analysis.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/ppt-template.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/ppt-template.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/ib-check-deck.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/ib-check-deck.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/dcf.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/dcf.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/debug-model.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/debug-model.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/3-statement-model.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/3-statement-model.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/commands/lbo.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/commands/lbo.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/3-statement-model/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/3-statement-model/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/3-statement-model/references/sec-filings.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/3-statement-model/references/sec-filings.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/3-statement-model/references/formulas.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/3-statement-model/references/formulas.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/3-statement-model/references/formatting.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/3-statement-model/references/formatting.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/comps-analysis/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/comps-analysis/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/clean-data-xls/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/clean-data-xls/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/xlsx-author/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/xlsx-author/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/ppt-template-creator/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/ppt-template-creator/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/deck-refresh/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/deck-refresh/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/check-model/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/check-model/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/references/report-format.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/references/report-format.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/references/ib-terminology.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/references/ib-terminology.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/references/frameworks.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/references/frameworks.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/references/schemas.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/references/schemas.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/skill-creator/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/skill-creator/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/skill-creator/references/workflows.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/skill-creator/references/workflows.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/skill-creator/references/output-patterns.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/skill-creator/references/output-patterns.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/lbo-model/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/lbo-model/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/pptx-author/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/pptx-author/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/dcf-model/TROUBLESHOOTING.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/dcf-model/TROUBLESHOOTING.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/dcf-model/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/dcf-model/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/commands/morning-note.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/commands/morning-note.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/commands/thesis.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/commands/thesis.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/commands/initiate.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/commands/initiate.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/commands/sector.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/commands/sector.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/commands/model-update.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/commands/model-update.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/commands/earnings-preview.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/commands/earnings-preview.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/commands/earnings.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/commands/earnings.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/earnings-analysis/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/earnings-analysis/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/earnings-analysis/references/best-practices.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/earnings-analysis/references/best-practices.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/earnings-analysis/references/workflow.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/earnings-analysis/references/workflow.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/earnings-analysis/references/report-structure.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/earnings-analysis/references/report-structure.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/idea-generation/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/idea-generation/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/sector-overview/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/sector-overview/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/valuation-methodologies.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/valuation-methodologies.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task3-valuation.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task3-valuation.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task1-company-research.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task1-company-research.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task2-financial-modeling.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task2-financial-modeling.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task5-report-assembly.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task5-report-assembly.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task4-chart-generation.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/references/task4-chart-generation.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/assets/quality-checklist.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/assets/quality-checklist.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/assets/report-template.md",
+      "full_path": "中文版/plugins/vertical-plugins/equity-research/skills/initiating-coverage/assets/report-template.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/README.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/README.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/commands/cim.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/commands/cim.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/commands/teaser.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/commands/teaser.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/commands/process-letter.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/commands/process-letter.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/commands/one-pager.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/commands/one-pager.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/commands/merger-model.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/commands/merger-model.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/commands/deal-tracker.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/commands/deal-tracker.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/commands/buyer-list.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/commands/buyer-list.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/cim-builder/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/cim-builder/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/merger-model/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/merger-model/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/deal-tracker/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/deal-tracker/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/process-letter/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/process-letter/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/pitch-deck/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/pitch-deck/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/formatting-standards.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/formatting-standards.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/xml-reference.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/xml-reference.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/calculation-standards.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/calculation-standards.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/slide-templates.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/pitch-deck/reference/slide-templates.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/teaser/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/teaser/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/datapack-builder/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/datapack-builder/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/strip-profile/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/strip-profile/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/investment-banking/skills/buyer-list/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/investment-banking/skills/buyer-list/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/operations/skills/kyc-doc-parse/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/operations/skills/kyc-doc-parse/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/operations/skills/kyc-rules/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/operations/skills/kyc-rules/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/wealth-management/commands/client-review.md",
+      "full_path": "中文版/plugins/vertical-plugins/wealth-management/commands/client-review.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/wealth-management/commands/rebalance.md",
+      "full_path": "中文版/plugins/vertical-plugins/wealth-management/commands/rebalance.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/wealth-management/commands/tlh.md",
+      "full_path": "中文版/plugins/vertical-plugins/wealth-management/commands/tlh.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/wealth-management/commands/client-report.md",
+      "full_path": "中文版/plugins/vertical-plugins/wealth-management/commands/client-report.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/wealth-management/commands/proposal.md",
+      "full_path": "中文版/plugins/vertical-plugins/wealth-management/commands/proposal.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/wealth-management/commands/financial-plan.md",
+      "full_path": "中文版/plugins/vertical-plugins/wealth-management/commands/financial-plan.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/fund-admin/skills/nav-tieout/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/fund-admin/skills/nav-tieout/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/fund-admin/skills/accrual-schedule/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/fund-admin/skills/accrual-schedule/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/fund-admin/skills/gl-recon/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/fund-admin/skills/gl-recon/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/fund-admin/skills/break-trace/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/fund-admin/skills/break-trace/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/vertical-plugins/fund-admin/skills/roll-forward/SKILL.md",
+      "full_path": "中文版/plugins/vertical-plugins/fund-admin/skills/roll-forward/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/agent-plugins/pitch-agent/skills/dcf-model/TROUBLESHOOTING.md",
+      "full_path": "中文版/plugins/agent-plugins/pitch-agent/skills/dcf-model/TROUBLESHOOTING.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/agent-plugins/kyc-screener/skills/xlsx-author/SKILL.md",
+      "full_path": "中文版/plugins/agent-plugins/kyc-screener/skills/xlsx-author/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/agent-plugins/valuation-reviewer/skills/portfolio-monitoring/SKILL.md",
+      "full_path": "中文版/plugins/agent-plugins/valuation-reviewer/skills/portfolio-monitoring/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/agent-plugins/valuation-reviewer/skills/xlsx-author/SKILL.md",
+      "full_path": "中文版/plugins/agent-plugins/valuation-reviewer/skills/xlsx-author/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/agent-plugins/valuation-reviewer/skills/ic-memo/SKILL.md",
+      "full_path": "中文版/plugins/agent-plugins/valuation-reviewer/skills/ic-memo/SKILL.md",
+      "status": "缺失附录"
+    },
+    {
+      "file_path": "plugins/agent-plugins/valuation-reviewer/skills/returns-analysis/SKILL.md",
+      "full_path": "中文版/plugins/agent-plugins/valuation-reviewer/skills/returns-analysis/SKILL.md",
+      "status": "缺失附录"
+    }
+  ]
+}
