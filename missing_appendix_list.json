@@ -1,9 +1,9 @@
 {
   "summary": {
     "total_files": 253,
-    "has_appendix": 110,
-    "missing_appendix": 143,
-    "appendix_coverage_rate": 43.48
+    "has_appendix": 113,
+    "missing_appendix": 140,
+    "appendix_coverage_rate": 44.66
   },
   "missing_files": [
  
@@ -22,17 +22,17 @@
     {
       "file_path": "plugins/partner-built/spglobal/skills/tear-sheet/references/equity-research.md",
       "full_path": "中文版/plugins/partner-built/spglobal/skills/tear-sheet/references/equity-research.md",
-      "status": "缺失附录"
+      "status": "已完成 (2026-06-07)"
     },
     {
       "file_path": "plugins/partner-built/spglobal/skills/tear-sheet/references/sales-bd.md",
       "full_path": "中文版/plugins/partner-built/spglobal/skills/tear-sheet/references/sales-bd.md",
-      "status": "缺失附录"
+      "status": "已完成 (2026-06-07)"
     },
     {
       "file_path": "plugins/partner-built/spglobal/skills/tear-sheet/references/ib-ma.md",
       "full_path": "中文版/plugins/partner-built/spglobal/skills/tear-sheet/references/ib-ma.md",
-      "status": "缺失附录"
+      "status": "已完成 (2026-06-07)"
     },
     {
       "file_path": "plugins/partner-built/lseg/README.md",
