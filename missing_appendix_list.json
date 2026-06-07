@@ -1,27 +1,14 @@
 {
   "summary": {
     "total_files": 253,
-    "has_appendix": 108,
-    "missing_appendix": 145,
-    "appendix_coverage_rate": 42.69
+    "has_appendix": 110,
+    "missing_appendix": 143,
+    "appendix_coverage_rate": 43.48
   },
   "missing_files": [
  
-    {
-      "file_path": "plugins/partner-built/spglobal/README.md",
-      "full_path": "中文版/plugins/partner-built/spglobal/README.md",
-      "status": "已完成 (2026-06-07)"
-    },
-    {
-      "file_path": "plugins/partner-built/spglobal/skills/funding-digest/references/sector-seeds.md",
-      "full_path": "中文版/plugins/partner-built/spglobal/skills/funding-digest/references/sector-seeds.md",
-      "status": "缺失附录"
-    },
-    {
-      "file_path": "plugins/partner-built/spglobal/skills/earnings-preview-beta/report-template.md",
-      "full_path": "中文版/plugins/partner-built/spglobal/skills/earnings-preview-beta/report-template.md",
-      "status": "缺失附录"
-    },
+
+
     {
       "file_path": "plugins/partner-built/spglobal/skills/earnings-preview-beta/references/earnings-preview-framework.md",
       "full_path": "中文版/plugins/partner-built/spglobal/skills/earnings-preview-beta/references/earnings-preview-framework.md",
