@@ -1,149 +1,20 @@
----
-description: 分析季度财报并生成业绩更新报告 (Earnings Update Report)
-argument-hint: "[公司名称或股票代码] [季度，例如 Q3 2024]"
----
+#!/usr/bin/env python3
+# Update earnings.md
+file_path = '/Users/saga/code-repos/financial-services-plugins/中文版/plugins/vertical-plugins/equity-research/commands/earnings.md'
 
-# 财报分析指令 (Earnings Analysis Command)
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-创建一份专业的股票研究财报更新报告，分析上市公司的季度业绩。
+# Find end of Quality Checklist
+marker = '> **💡 Appendix: 领域知识小贴士'
+idx = content.find(marker)
+if idx < 0:
+    print('ERROR: marker not found')
+    exit(1)
 
-## 工作流 (Workflow)
+before = content[:idx].rstrip('\n') + '\n\n---\n\n'
 
-### 第 1 步：收集信息 (Gather Information)
-
-从输入中解析出：
-- 公司名称或股票代码 (Company name or ticker)
-- 季度 (Quarter，如 Q3 2024, Q2 FY25)
-
-如果没有提供，请询问：
-- "您想分析哪家公司的财报？"
-- "哪个季度？(例如：Q3 2024)"
-
-### 第 2 步：验证时效性 (Verify Timeliness)
-
-**极其重要 (CRITICAL)**：在继续之前，请务必验证您拥有最新的数据：
-1. 搜索 "[公司名称] 最新财报业绩 [当前年份]"
-2. 确认财报发布时间是在最近 3 个月内
-3. 确认财报电话会议实录 (Transcript) 日期与财报发布日期一致
-
-如果数据已过期，请告知用户并搜索最新数据。
-
-### 第 3 步：加载财报分析技能 (Load Earnings Analysis Skill)
-
-使用 `skill: "earnings-analysis"` (财报分析) 生成报告：
-
-1. **数据收集 (Data Collection)** (搜索最新):
-   - 财报新闻稿 (Earnings release / press release)
-   - SEC EDGAR 数据库中的 10-Q 季度报表
-   - 财报电话会议实录 (Earnings call transcript)
-   - 投资者演示文稿/补充材料 (Investor presentation/supplemental materials)
-   - 市场一致预期 (Consensus estimates，来自 Bloomberg/FactSet)
-
-2. **超预期/不及预期分析 (Beat/Miss Analysis)**:
-   - 营收 (Revenue) vs 预期：超出/不及预期 $X 或 X%
-   - 每股收益 (EPS) vs 预期：超出/不及预期 $X 或 X%
-   - 核心业务部门表现 vs 预期
-   - 解释业绩偏离预期的深层原因 (WHY)
-
-3. **核心指标分析 (Key Metrics Analysis)**:
-   - 按部门/地域划分的营收拆解
-   - 利润率趋势 (毛利率 gross、营业利润率 operating、净利率 net)
-   - 业绩指引 (Guidance)：上调 (raised)/维持 (maintained)/下调 (lowered)
-   - 更新后的前瞻盈利预测 (Updated forward estimates)
-
-4. **生成图表 (Generate Charts)** (8-12张):
-   - 季度营收演进图
-   - 季度 EPS 演进图
-   - 利润率趋势
-   - 各部门营收拆解
-   - Beat/miss (超预期情况) 汇总
-   - 分析师预期修正调整
-   - 估值图表
-
-5. **生成报告 (Create Report)** (8-12 页):
-   - 第 1 页：包含评级 (rating) 和目标价 (price target) 的总结
-   - 第 2-3 页：详细业绩分析
-   - 第 4-5 页：核心指标与业绩指引
-   - 第 6-7 页：更新后的投资逻辑 (Investment thesis)
-   - 第 8-10 页：估值与盈利预测
-   - 包含可点击超链接的数据来源部分 (Sources)
-
-### 第 4 步：交付输出 (Deliver Output)
-
-提供：
-1. **DOCX 格式报告** - 8-12 页的财报更新文档
-2. **核心摘要 (Summary)**，重点突出：
-   - 核心指标的 Beat/miss (超/不及预期情况)
-   - 业绩指引的变化
-   - 对整体投资逻辑的影响（正面/负面/中性）
-
-## 报告结构参考 (Report Structure Reference)
-
-```
-第 1 页: 财报摘要 (EARNINGS SUMMARY)
-┌─────────────────────────────────────────────────────────────────┐
-│ [公司名称] Q3 2024 财报更新 (Earnings Update)                    │
-│ 评级：买入 (BUY) | 目标价：$XXX (原为 $XXX)                       │
-├─────────────────────────────────────────────────────────────────┤
-│ 核心观点 (KEY TAKEAWAYS)                                         │
-│ • 营收超预期 X%，主要受 [业务部门] 强劲表现驱动                     │
-│ • 每股收益 (EPS) 超预期 $X.XX，得益于利润率扩张                     │
-│ • 全年业绩指引上调至 $X.XX-$X.XX (原指引为 $X.XX-$X.XX)            │
-│ • 核心投资逻辑未变；维持“买入”评级                                │
-├─────────────────────────────────────────────────────────────────┤
-│ 业绩快照 (RESULTS SNAPSHOT)                                     │
-│ ┌─────────────┬──────────┬──────────┬──────────┐               │
-│ │ 指标        │ 实际值    │ 市场预期  │ Beat/Miss│               │
-│ │ 营收        │ $X.XX十亿│ $X.XX十亿│ +X.X%    │               │
-│ │ EPS (每股收益)│ $X.XX    │ $X.XX    │ +$X.XX   │               │
-│ │ 毛利率      │ XX.X%    │ XX.X%    │ +XX个基点 │               │
-│ └─────────────┴──────────┴──────────┴──────────┘               │
-└─────────────────────────────────────────────────────────────────┘
-
-第 2-3 页: 详细业绩分析 (DETAILED RESULTS)
-- 逐个事业部拆解分析
-- 地域分布拆解
-- 业绩超预期/不及预期的核心驱动因素
-
-第 4-5 页: 指标与指引 (METRICS & GUIDANCE)
-- 利润率分析
-- 全年业绩指引对比
-- 季度预期数据更新
-
-第 6-7 页: 投资逻辑更新 (THESIS UPDATE)
-- 发生了什么变化
-- 风险与催化剂
-- 投资建议
-
-第 8-10 页: 估值 (VALUATION)
-- (如产生重大影响) 更新贴现现金流(DCF)/可比公司(Comps)模型
-- 目标价的合理性论证
-- 情景分析 (Scenario analysis)
-
-数据来源 (带有可点击的超链接):
-- 财报新闻稿: [链接]
-- 10-Q 报表: [EDGAR链接]
-- 财报电话会议实录: [链接]
-- 市场一致预期: 来源于 Bloomberg，截至 [日期]
-```
-
-## 质量核对清单 (Quality Checklist)
-
-在交付前核对：
-- [ ] 财报数据来自最新季度（非过期数据）
-- [ ] Beat/miss（超/不及预期）通过具体的数字进行量化
-- [ ] 嵌入所有图表（共计 8-12 张）
-- [ ] 来源部分附有可点击超链接
-- [ ] 每一个数据图/表都有来源标注
-- [ ] 清晰记录了业绩指引的更改情况
-- [ ] 开篇即明确写出评级和目标价
-- [ ] 篇幅大约 8-12 页，3,000-5,000 字
-
----
-
----
-
-## Appendix: 金融背景知识
+appendix = '''## Appendix: 金融背景知识
 
 这份文件是"财报分析（Earnings Analysis）"命令的说明——在上市公司发布季度财报后，撰写一份深度分析报告，解读业绩超预期/不及预期的原因、更新盈利预测、评估对投资逻辑的影响。读完这个附录，你会搞懂：**一份 10 页的财报分析报告怎么写、Beat/Miss 分析的三层深度（表面数字 → 驱动因素 → 质量判断）、Guidance（业绩指引）为什么比历史业绩重要 10 倍、"修车铺"式的盈利预测更新怎么做、以及 EPS 的增长为什么有时候是"假增长"（回购把 EPS "注水"了）**。
 
@@ -293,3 +164,9 @@ EPS = 净利润 / 流通股数
 ### 给小白的一句话
 
 > **财报分析是股权研究的日常"面包"——在每家公司发布季度财报后，写一份 10 页的深度报告，分析 Beat/Miss 的原因、更新盈利预测、评估对投资逻辑的影响。专业分析有三层：表面数字（营收和 EPS 比 Consensus）、驱动因素（为什么 Beat/Miss）、质量判断（是一次性还是可持续）。Guidance（业绩指引）比历史数字重要 10 倍——"历史 Beat 但 Guidance Cut"通常还是跌。EPS 增长可能是"注水"的——如果公司在回购，EPS 增长率会高于净利润增长率。Earnings Call 上的"画外音"同样重要——管理层的措辞和语气透露的信息可能比财报数字更多。**
+'''
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(before + appendix)
+
+print(f'SUCCESS: earnings.md updated ({len(appendix)} chars)')

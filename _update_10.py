@@ -1,27 +1,19 @@
----
-name: ppt-template-creator
-description: 从用户提供的 PowerPoint 模板中创建独立的 PPT 模板技能（SKILLS）。仅当用户希望将其模板转化为可重复使用的 AI 技能时使用。若仅需创建单份演示文稿，请使用 pptx 技能。
----
+#!/usr/bin/env python3
+# Update ppt-template-creator/SKILL.md
+file_path = '/Users/saga/code-repos/financial-services-plugins/中文版/plugins/vertical-plugins/financial-analysis/skills/ppt-template-creator/SKILL.md'
 
-# PPT 模板创建器
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-**本技能产出的是“技能（SKILLS）”，而非单份幻灯片。** 当用户希望将他们的企业 PPT 模板转化为一个可永久使用的 AI 技能时，调用此工具。
+marker = '### 【金融知识小贴士】—— 给小白的 Appendix'
+idx = content.find(marker)
+if idx < 0:
+    print('ERROR: marker not found')
+    exit(1)
 
-生成的技能结构如下：
-- `assets/template.pptx` - 原始模板文件
-- `SKILL.md` - 完整的 AI 操作指令
+before = content[:idx].rstrip('\n') + '\n\n'
 
-## 工作流
-1. **分析模板**：提取布局（Layouts）、占位符（Placeholders）及其精确坐标。
-2. **初始化技能结构**：参考 `skill-creator` 设置目录。
-3. **编写 SKILL.md**：嵌入 PPT 专用操作逻辑。
-
-### 核心：精确坐标提取
-必须使用代码（如 Python-pptx）提取占位符的精确 x, y 坐标（以英寸为单位）。这决定了 AI 生成内容时不会与模版自带的 Logo 或装饰线重叠。
-
----
-
-## Appendix: 金融背景知识
+appendix = '''## Appendix: 金融背景知识
 
 这份文件是"PPT 模板创建器（PPT Template Creator）"技能的详细说明——将企业的 PowerPoint 模板转化为可重复使用的 AI 技能，让 AI 能够按照模板的精确布局、颜色、字体和占位符来生成内容。读完这个附录，你会搞懂：**投行的 PPT 为什么有"军规"级别的格式要求、Master Slide（母版）和 Layout（布局）的区别、为什么投行 PPT 的配色只有 3-4 种颜色、Placeholder（占位符）为什么是 AI 生成 PPT 的"坐标系统"、以及一个排版错误为什么会让客户觉得"这家投行不靠谱"**。
 
@@ -149,3 +141,9 @@ PPT 的专业排版是通过**"双层架构"**实现的：
 ### 给小白的一句话
 
 > **投行 PPT 模板是投行的"制服"——统一的格式传递了专业、纪律和可靠的信号。母版（Master Slide）是"地基和框架"，布局（Layout）是"不同功能的房间"——封面页、正文页、财务页各有不同的版型。安全内容区（Safe Content Area）是你可以自由画图的"防区"——顶部和底部是 Logo、页码和合规声明的"禁区"，不能碰。占位符（Placeholder）是 AI 的"坐标系统"——它告诉 AI 精确在哪里放标题、哪里放图表。投行 PPT 的配色只有深蓝 + 浅蓝 + 灰 + 白四种——颜色是"信息的仆人"，多一种颜色就多一层干扰。Banker 的脑细胞不该浪费在"用什么字体、什么颜色"上——模板把这些决策"消灭"了，让你专注于"公司值多少钱"。**
+'''
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(before + appendix)
+
+print(f'SUCCESS: ppt-template-creator/SKILL.md updated ({len(appendix)} chars)')

@@ -1,17 +1,19 @@
----
-description: 构建包含多种情景假设的财报前瞻 (Pre-earnings Preview)
-argument-hint: "[输入公司股票代码 (Ticker)]"
----
+#!/usr/bin/env python3
+# Update earnings-preview.md
+file_path = '/Users/saga/code-repos/financial-services-plugins/中文版/plugins/vertical-plugins/equity-research/commands/earnings-preview.md'
 
-加载 `earnings-preview` (财报前瞻) 技能模块，并生成一份财报前发布局分析。该分析需包含市场一致预期 (Consensus Estimates)、需密切关注的核心业绩指标 (Key Metrics to Watch)，以及乐观/基准/悲观三种情景假设 (Bull/Base/Bear scenarios)。
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-如果用户输入内已包含股票代码 (Ticker)，请直接调用；否则，请主动询问用户需分析哪家即将发布财报的公司。
+marker = '> **💡 Appendix: 领域知识小贴士'
+idx = content.find(marker)
+if idx < 0:
+    print('ERROR: marker not found')
+    exit(1)
 
----
+before = content[:idx].rstrip('\n') + '\n\n---\n\n'
 
----
-
-## Appendix: 金融背景知识
+appendix = '''## Appendix: 金融背景知识
 
 这份文件是"财报前瞻（Pre-earnings Preview）"命令的说明——在公司发布季度财报之前，写一份前瞻分析报告，预测公司是"超预期"还是"不及预期"。读完这个附录，你会搞懂：**为什么股价不跟着"赚多少"走而是跟着"预期差"走、Consensus（市场一致预期）是怎么形成的、为什么"财报前的布局"比"财报后的反应"更赚钱、Bull/Base/Bear 三种情景分析怎么做、以及财报季为什么被称为华尔街的"超级碗"**。
 
@@ -150,3 +152,9 @@ argument-hint: "[输入公司股票代码 (Ticker)]"
 ### 给小白的一句话
 
 > **财报前瞻是股权研究的"赛前分析"——在公司发布财报之前，预测哪些指标会"超预期（Beat）"、"不及预期（Miss）"或"符合预期（In-line）"。股价不跟着"赚多少"走，而是跟着"预期差"走——赚 100 亿但 Consensus 是 120 亿，股价照跌不误。Consensus 由 Bloomberg/FactSet 收集所有分析师的预测取中位数，但要注意"Whisper Number"——市场上真实预期可能更高。Bull/Base/Bear 三情景分析不是"猜数字"，而是"画风险边界"——告诉你最坏情况下最多会亏多少。财报季一年 4 次，是华尔街最疯狂的几周，投行新人基本不睡觉。记住核心公式：股价反应 = 实际业绩 - 市场预期，不是"绝对值"，是"差"。**
+'''
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(before + appendix)
+
+print(f'SUCCESS: earnings-preview.md updated ({len(appendix)} chars)')

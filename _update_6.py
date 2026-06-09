@@ -1,15 +1,19 @@
----
-description: 起草晨会纪要 (Morning Meeting Note)
-argument-hint: ""
----
+#!/usr/bin/env python3
+# Update morning-note.md
+file_path = '/Users/saga/code-repos/financial-services-plugins/中文版/plugins/vertical-plugins/equity-research/commands/morning-note.md'
 
-加载 `morning-note` (晨报/晨会纪要) 技能模块，起草一份简明扼要的晨会报告。报告需涵盖隔夜发生的重大事件动态、市场对新出炉财报的反应，以及覆盖股票池内的交易思路 (Trade ideas)。
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
----
+marker = '> **💡 Appendix: 领域知识小贴士'
+idx = content.find(marker)
+if idx < 0:
+    print('ERROR: marker not found')
+    exit(1)
 
----
+before = content[:idx].rstrip('\n') + '\n\n---\n\n'
 
-## Appendix: 金融背景知识
+appendix = '''## Appendix: 金融背景知识
 
 这份文件是"晨报/晨会纪要（Morning Note）"命令的说明——在每天开盘前起草一份简明扼要的报告，涵盖隔夜发生的重大事件、市场对新出炉财报的反应以及当天的交易思路。读完这个附录，你会搞懂：**华尔街的"一天"从几点开始、晨会（Morning Meeting）上的三方玩家（Sales & Trading、Research、Banking）各自在干什么、一份好的 Morning Note 为什么不超过 1 页、Overnight News（隔夜新闻）为什么比"中国时间早上 9 点的新闻"更重要、以及 Trade Idea（交易思路）为什么是晨报的"灵魂"**。
 
@@ -157,3 +161,9 @@ argument-hint: ""
 ### 给小白的一句话
 
 > **华尔街的 Morning Note（晨报）是投行和券商每天早上开盘前的"战前简报"——把隔夜重大新闻（Overnight News）、财报反应（Earnings Reactions）和交易思路（Trade Ideas）压缩成 1 页纸，告诉销售交易员和客户"今天该买什么卖什么"。晨会是华尔街雷打不动的仪式——Sales & Trading、Research、Banking 三方在盘前 1 小时对齐信息。一份好的 Morning Note 不超过 1 页，每个新闻 1-2 句话，Trade Ideas 粗体标注。它的灵魂不是"发生了什么"（客户自己会看新闻），而是"因为这个新闻，今天你应该做什么"。买方基金经理每天收到 10-20 份晨报，每份看 30 秒——少即是多，长了没人读。**
+'''
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(before + appendix)
+
+print(f'SUCCESS: morning-note.md updated ({len(appendix)} chars)')

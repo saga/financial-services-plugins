@@ -1,17 +1,19 @@
----
-description: 创建行业深度概览报告 (Sector Overview Report)
-argument-hint: "[板块或行业名称]"
----
+#!/usr/bin/env python3
+# Update sector.md
+file_path = '/Users/saga/code-repos/financial-services-plugins/中文版/plugins/vertical-plugins/equity-research/commands/sector.md'
 
-加载 `sector-overview` (行业概览) 技能模块，创建一份探讨全行业格局的深度报告，需涵盖市场规模测算 (Market Sizing)、竞争动态格局 (Competitive Dynamics) 以及相应的投资启示 (Investment implications)。
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-如果用户输入了具体的行业，请使用它；否则，主动询问用户希望扫描研究哪个行业。
+marker = '> **💡 Appendix: 领域知识小贴士'
+idx = content.find(marker)
+if idx < 0:
+    print('ERROR: marker not found')
+    exit(1)
 
----
+before = content[:idx].rstrip('\n') + '\n\n---\n\n'
 
----
-
-## Appendix: 金融背景知识
+appendix = '''## Appendix: 金融背景知识
 
 这份文件是"行业概览（Sector Overview）"命令的说明——从宏观上帝视角审视一个行业的市场规模、竞争格局和投资机会，而不是"盯着一家公司"。读完这个附录，你会搞懂：**行业概览和个股报告有什么本质区别、TAM/SAM/SOM 三个市场规模"泡泡"是什么、波特五力模型如何在真实世界中使用、行业生命周期（导入期→成长期→成熟期→衰退期）如何决定你的投资策略、以及为什么投行人和 PE 都说"赛道比选手更重要"**。
 
@@ -148,3 +150,9 @@ argument-hint: "[板块或行业名称]"
 ### 给小白的一句话
 
 > **行业概览是投资研究的"上帝视角"——先看赛道好不好，再看选手跑不跑得快。TAM（总市场）、SAM（可触达市场）、SOM（可获取市场）三个"泡泡"决定了"饼能画多大"。波特五力模型（竞争者、新进入者、替代品、买方、供应商）衡量一个行业的"赚钱难易度"——五力越强，行业越难赚钱。行业生命周期（导入→成长→成熟→衰退）决定了你的估值框架——用 PE 看成熟期公司没毛病，但看成长期公司会错过伟大投资。巴菲特的哲学："当卓越的管理遇上糟糕的行业，通常是行业的名声完好无损"——再好的 CEO 也难以在夕阳行业里创造奇迹。柯达 1975 年就发明了数码相机，却最终死在数码革命中——因为行业的力量远超个体。记住：选股之前先选赛道。**
+'''
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(before + appendix)
+
+print(f'SUCCESS: sector.md updated ({len(appendix)} chars)')

@@ -1,17 +1,19 @@
----
-description: 创建首次覆盖深度报告 (Initiating Coverage Report)
-argument-hint: "[输入公司股票代码 (Ticker)]"
----
+#!/usr/bin/env python3
+# Update initiate.md
+file_path = '/Users/saga/code-repos/financial-services-plugins/中文版/plugins/vertical-plugins/equity-research/commands/initiate.md'
 
-加载 `initiating-coverage` (首次覆盖) 技能模块，并启动分为 5 个任务的工作流，以产出一份具备机构级专业水平的新股首次覆盖报告。
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-如果用户提供股票代码，请直接使用；否则，请主动询问用户希望覆盖研究哪家公司。
+marker = '> **💡 Appendix: 领域知识小贴士'
+idx = content.find(marker)
+if idx < 0:
+    print('ERROR: marker not found')
+    exit(1)
 
----
+before = content[:idx].rstrip('\n') + '\n\n---\n\n'
 
----
-
-## Appendix: 金融背景知识
+appendix = '''## Appendix: 金融背景知识
 
 这份文件是"首次覆盖（Initiating Coverage）"命令的说明——当一家券商决定开始长期追踪某家上市公司时，撰写第一份也是最详尽的长篇研究报告。读完这个附录，你会搞懂：**首次覆盖报告为什么是股权研究员的"名片"、一份 50 页的报告里到底写了什么、评级体系（Buy/Hold/Sell）和水下真相、目标价（Price Target）是怎么算出来的、以及 Initiation Report 和普通 Earnings Update 有什么本质区别**。
 
@@ -173,3 +175,9 @@ argument-hint: "[输入公司股票代码 (Ticker)]"
 ### 给小白的一句话
 
 > **首次覆盖（Initiation）是股权研究员的"名片"和"博士论文"——30-80 页深度报告，涵盖公司概述、行业分析、投资逻辑、财务分析和估值全部环节。和日常财报更新的区别：Initiation 是"从零建立认知"，财报更新是"确认已有判断"。华尔街的评级体系是"加密语言"——Hold 基本等于 Sell（但不敢直说），只有 5% 的评级是真的 Sell。目标价来自 DCF（绝对估值）和 Comps（相对估值）的加权平均，是 12 个月目标而不是明天就会到的。Meredith Whitney 靠一份"不看好花旗"的首次覆盖一战成名——好的首次覆盖的价值不在于篇幅，在于是否有独到判断。记住：一份 Initiation 写完，买方会在 5 分钟内决定——是继续关注你，还是永久忽略你。**
+'''
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(before + appendix)
+
+print(f'SUCCESS: initiate.md updated ({len(appendix)} chars)')
