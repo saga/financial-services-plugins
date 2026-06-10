@@ -229,3 +229,82 @@ EV = 市值 + 债务 - 现金及等价物
 - 交易数据可能有限
 - 交易条件差异大
 - 时间敏感性
+
+---
+
+## Appendix: 金融背景知识
+
+这份文件是"PPT 创作（PPTX Author）"技能的详细说明。在投资银行中，Python 生成 PPT 是一个高阶技能——当你需要在没有 Office 环境的服务器上批量生成 PPT 时，Python 是唯一的方案。
+
+---
+
+### 1. 什么是 Python 生成 PPT？
+
+**类比：**
+想象你是一个印刷厂工人。你的任务是"印 100 份同样的菜单"。你不会自己手写 100 遍——你会设置好印刷机（Python 脚本），让机器自动印。
+
+Python 生成 PPT 就是投行的"自动化排版机"——写一段代码，让它自动生成 50 页的 Pitch Deck。
+
+---
+
+### 2. 为什么投行需要用 Python 生成 PPT？
+
+| 场景 | 说明 |
+|------|------|
+| 批量生产 | 同一模板生成 100 份不同的客户 PPT |
+| 无界面环境 | 服务器上没有 Office 软件 |
+| 自动化流程 | CI/CD 管道中自动生成输出 |
+| 数据驱动 | 从 Excel 数据库自动填充数字到 PPT |
+
+---
+
+### 3. python-pptx 的核心操作
+
+```python
+from pptx import Presentation
+
+# 1. 打开模板
+prs = Presentation('template.pptx')
+
+# 2. 选择幻灯片
+slide = prs.slides[0]
+
+# 3. 修改文本框
+for shape in slide.shapes:
+    if shape.has_text_frame:
+        for paragraph in shape.text_frame.paragraphs:
+            for run in paragraph.runs:
+                if '{{REVENUE}}' in run.text:
+                    run.text = run.text.replace('{{REVENUE}}', '$1.2B')
+
+# 4. 保存
+prs.save('output.pptx')
+```
+
+---
+
+### 4. PPT 自动生成的"三大注意事项"
+
+| 注意项 | 说明 |
+|--------|------|
+| 字体兼容 | 服务器上可能没有你需要的字体（如"微软雅黑"） |
+| 图片嵌入 | 图表必须转成 PNG 再嵌入 |
+| 模板一致性 | 模板中的占位符必须统一命名（如 `{{TARGET_PRICE}}`） |
+
+---
+
+### 5. 真实案例：自动生成 100 份客户 Pitch
+
+**背景**：某投行需要为 100 个潜在客户各生成一份 20 页的 Pitch Deck
+
+| 手动方式 | Python 方式 |
+|---------|------------|
+| 1 人 × 50 小时 = 50 小时 | 1 脚本 × 5 分钟 = 5 分钟 |
+| 容易出错（复制粘贴） | 零出错率 |
+| 改一个字要改 100 份 | 改一次代码全更新 |
+
+---
+
+### 给小白的一句话
+
+> PPTX Author 就是投行 PPT 的"工业革命"——以前需要手工一页一页画图表、写数字，现在写一段 Python 代码就能自动生成 100 份 PPT。这对于需要批量生产的场景（比如给 100 个客户各自定制一份 Pitch Deck）简直是"作弊器"。但要记住：自动化的前提是"模板标准"——如果你每个客户的 PPT 长得都不一样，机器也帮不了你。标准化的模板 + 正确的数据填充 = 机器替代重复劳动。

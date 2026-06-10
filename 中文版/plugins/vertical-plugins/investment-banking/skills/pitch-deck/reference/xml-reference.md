@@ -640,3 +640,97 @@ for shape in slide.shapes:
 - 区块链和分布式账本
 - 开放银行API
 - 监管科技（RegTech）
+
+---
+
+## Appendix: 金融背景知识
+
+这份文件是"PowerPoint XML 参考（XML Reference）"文档的详细说明。在投资银行中，当需要高度精确地操作 PPT（尤其是通过 Python 或编程方式），理解 PPT 的底层 XML 结构至关重要。
+
+---
+
+### 1. 什么是 PPT 的 XML 结构？
+
+**类比：**
+想象 PPT 是一个"乐高模型"。表面上你看到的是好看的城堡（幻灯片），但如果你拆开来看，城堡是由无数小乐高积木（XML 元素）组成的。每一块积木都有精确的位置、颜色、尺寸。
+
+XML Reference 就是"乐高积木的说明书"——告诉你每个元素的结构和属性。
+
+---
+
+### 2. PPT 底层的"三大核心对象"
+
+| 对象 | 英文 | XML 标签 | 说明 |
+|------|------|---------|------|
+| 文本框 | Text Box | `<a:p>` (段落) | 所有文字的容器 |
+| 表格 | Table | `<a:tbl>` | 数据展示的核心 |
+| 形状 | Shape | `<p:sp>` | 矩形、圆形、箭头等 |
+| 连接线 | Connector | `<p:cxnSp>` | 连接两个形状的箭头 |
+
+---
+
+### 3. 为什么投行需要懂 XML？
+
+| 场景 | 原因 |
+|------|------|
+| 批量修改 | 改 100 张幻灯片中某一个元素的颜色，用 XML 比手动快 |
+| 精确控制 | 软件界面上做不到的微调，XML 能做到 |
+| 自动化 | 用 Python 生成 PPT 时，直接操作 XML 更可靠 |
+| 修复损坏的文件 | 解压 .pptx（本质是一个 ZIP）后手动修 XML |
+
+---
+
+### 4. .pptx 文件的"内部结构"
+
+```
+my_pitch.pptx (实际上是一个 ZIP 文件)
+  ├── [Content_Types].xml
+  ├── _rels/
+  ├── ppt/
+  │   ├── presentation.xml       # 幻灯片顺序和尺寸
+  │   ├── slides/
+  │   │   ├── slide1.xml         # 第 1 张幻灯片内容
+  │   │   ├── slide2.xml         # 第 2 张幻灯片内容
+  │   │   └── ...
+  │   ├── slideLayouts/
+  │   ├── slideMasters/           # 幻灯片母版
+  │   └── theme/
+  └── docProps/
+```
+
+**关键洞察**：你可以把 .pptx 改成 .zip，解压后直接编辑里面的 XML，再压缩回 .pptx。
+
+---
+
+### 5. 真实场景：批量修改 50 页中某个文本框的颜色
+
+**手动方式**：打开 PPT，点 50 页，每页点文本框，改颜色 → 20 分钟
+
+**XML 方式**：
+```python
+import zipfile, os, shutil
+
+# 1. 解压 .pptx
+with zipfile.ZipFile('pitch.pptx', 'r') as z:
+    z.extractall('temp')
+
+# 2. 批量替换 XML 中的颜色
+import glob
+for slide_file in glob.glob('temp/ppt/slides/slide*.xml'):
+    with open(slide_file, 'r') as f:
+        content = f.read()
+    content = content.replace('FF0000', '0000FF')  # 红色 → 蓝色
+    with open(slide_file, 'w') as f:
+        f.write(content)
+
+# 3. 重新压缩
+shutil.make_archive('pitch_modified', 'zip', 'temp')
+os.rename('pitch_modified.zip', 'pitch_modified.pptx')
+```
+→ 2 分钟
+
+---
+
+### 给小白的一句话
+
+> XML Reference 就像投行 PPT 的"工程机里的电路图"——平时你看不到，也不需要用，但当你需要批量修改 100 张幻灯片中某个元素的颜色、或者修复一个损坏的 PPT 文件，你会发现 PPT 本质就是一个 ZIP 包里面装着 XML 文件。理解 XML 结构让你能"用代码操作 PPT 的内部结构"而不只是"在界面里点击"。这在投行批量生成 100 份 Pitch 时可能节省你几小时的时间。
