@@ -290,3 +290,50 @@ export MCP_URL=...
 3. 创建叶子工作节点
 4. 注册代理配置
 5. 验证部署结果
+
+---
+
+## Appendix: 金融背景知识
+
+这份文件是"托管代理模板（Managed Agent Cookbooks）"的总体说明。它是所有 9 个金融服务 Agent 的"目录"——解释了每个 Agent 做什么、对应哪个垂直行业、由哪些技能组成。
+
+---
+
+### 1. 什么是 Managed Agent？
+
+**类比**：你经营一个呼叫中心。不同的客户来电需要转到不同的专家：投诉的转投诉专员、咨询的转客服专员、VIP 转高级客户经理。
+
+Managed Agent 就是金融服务的"智能呼叫中心"——不同的任务（做估值、对账、合规检查）自动路由到不同的 AI Agent。每个 Agent 有自己的"专业领域"和工具集。
+
+---
+
+### 2. 九大 Agent 一览
+
+| Agent | 一句话 |
+|-------|--------|
+| pitch-agent | 从数据到 PPT，全程自动化做投行推介 |
+| market-researcher | 对新行业做快速扫盲研究 |
+| earnings-reviewer | 财报发布后自动化更新模型 + 写报告 |
+| meeting-prep-agent | 见客户前准备所有背景资料 |
+| model-builder | 从零建造 DCF/LBO/Comps |
+| gl-reconciler | 每天自动化对账：总账 vs 子账 |
+| kyc-screener | 新客户开户前自动化合规筛查 |
+| statement-auditor | LP 对账单发出前的最后审计 |
+| valuation-reviewer | 独立审核 GP 的基金估值 |
+
+---
+
+### 3. Cowork 插件 vs Managed Agent
+
+| 方式 | 适用场景 |
+|------|---------|
+| Cowork 插件 | 分析师自己用——安装到 Excel/PPT 中手动触发 |
+| Managed Agent | 平台团队部署——接入工作流引擎自动触发 |
+
+**核心理念**：同一个 Agent、同一套技能——只是部署方式不同。
+
+---
+
+### 给小白的一句话
+
+> Managed Agent Cookbooks 就是金融服务 AI 的"菜单"——列出了 9 个专业 Agent（从投行推介到 KYC 合规到估值审核），每个 Agent 就像一名"数字员工"：你告诉它任务，它去完成并交付结果。关键概念是"同一个Agent、两种部署"：你可以像装 Office 插件一样自己用（Cowork），也可以让 IT 团队部署成自动化流程（Managed Agent）——但背后的技能和逻辑是完全一样的。

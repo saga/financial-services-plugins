@@ -282,3 +282,37 @@ wb.save("./out/model.xlsx")
 - 关键假设文档化
 - 复杂公式添加注释
 - 版本历史记录
+
+---
+
+## Appendix: 金融背景知识
+
+这份文件是"Excel 创作（XLSX Author）"技能的详细说明。在 Earnings Reviewer 的上下文中，XLSX Author 负责将财报分析结果输出成一个格式规范的 Excel 工作簿——包含差异对比表、预测修订和估值更新。
+
+---
+
+### 1. Earnings Reviewer 的 Excel 输出
+
+在财报分析中，Excel 工作簿是"证据包"——所有你在报告中写的数字，都必须在 Excel 里有"可追溯的来源"。
+
+**典型 Sheet 结构：**
+
+| Sheet | 内容 |
+|-------|------|
+| Actuals | 本季度实际数字（从 10-Q 提取） |
+| Consensus | 华尔街一致性预期 |
+| Variance | 实际 vs 共识 vs 上次预测的三方对比 |
+| Revised Forecast | 修订后的未来预测 |
+| Valuation | 更新后的 DCF/Comps 估值表 |
+
+---
+
+### 2. 核心要求
+
+每一个关键数字必须标注来源：哪个文件（10-Q）、哪一行、哪个项目。"拍脑袋"的数字在投行不可接受。
+
+---
+
+### 给小白的一句话
+
+> Earnings Reviewer 的 XLSX Author 就是财报分析的"证据制造机"——你的报告说"公司 Beat 了共识 3%"，这个 3% 是怎么算出来的？实际收入来自 10-Q 第 12 页，共识来自 FactSet，方差 = (实际-共识)/共识——每一步计算都必须在 Excel 里留下可追溯的痕迹，以备高级分析师逐行核查。
