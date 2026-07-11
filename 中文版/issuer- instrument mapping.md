@@ -350,7 +350,7 @@ GoldenInstrument --> Performance
 ----------------
 
 
-如果是 FIL、BlackRock、State Street、JPMAM 这种 Buy Side，一个 Security Master 的核心逻辑其实可以浓缩成 **"Normalization → Mapping → Golden Record → Downstream"** 四步。
+如果是 BlackRock、State Street、JPMAM 这种 Buy Side，一个 Security Master 的核心逻辑其实可以浓缩成 **"Normalization → Mapping → Golden Record → Downstream"** 四步。
 
 下面这个伪代码（Python 风格）比较接近真实业务。
 
@@ -849,7 +849,7 @@ flowchart LR
 * **MappingEngine**：维护各种 Identifier 到内部 ID 的映射关系及历史版本。
 * **GoldenRecordBuilder**：按照 Source Priority、数据质量规则、时间戳等策略生成唯一可信的 Golden Record。
 
-这种流水线式设计比单体实现更容易扩展新的数据源、支持不同资产类别（股票、债券、基金、衍生品），也更符合 FIL、BlackRock 等大型 Buy Side 的生产实践。
+这种流水线式设计比单体实现更容易扩展新的数据源、支持不同资产类别（股票、债券、基金、衍生品），也更符合BlackRock 等大型 Buy Side 的生产实践。
 
 
 ---------------------------
@@ -857,7 +857,7 @@ flowchart LR
 
 有，而且比很多人想象得多。不过需要说明一点：
 
-> **真正的大型 Buy Side（FIL、BlackRock、Fidelity、Capital Group）的 Security Master / Instrument Mapping 系统基本都是内部核心资产，不会开源。**
+> **真正的大型 Buy Side（BlackRock、Capital Group）的 Security Master / Instrument Mapping 系统基本都是内部核心资产，不会开源。**
 
 但是有不少项目、标准和文档，已经能让你理解 70%~90% 的业务模型。
 
@@ -905,7 +905,7 @@ Vendor Mapping
 Golden Security
 ```
 
-这些就是 FIL 每天都在处理的东西。
+这些就是每天都在处理的东西。
 
 ---
 
@@ -1264,7 +1264,7 @@ Security Identifier Mapping
 
 ---
 
-## 如果你的目标是「理解 FIL 的 Reference Data / Security Master」，我建议按这个阅读路线：
+## 如果你的目标是「理解 Reference Data / Security Master」，我建议按这个阅读路线：
 
 | 优先级   | 项目                                                                                                      | 学习内容                                             |
 | ----- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
@@ -1276,7 +1276,7 @@ Security Identifier Mapping
 | ⭐⭐⭐⭐☆ | [OpenGamma Strata](https://github.com/OpenGamma/Strata?utm_source=chatgpt.com)                          | 真实业务代码建模                                         |
 | ⭐⭐⭐☆☆ | [QuantLib](https://github.com/lballabio/QuantLib?utm_source=chatgpt.com)                                | 金融工具对象模型                                         |
 
-如果你的目的不仅是理解业务，而是**设计一个和 FIL 类似的 Security Master / Instrument Master 系统**，那么真正值得研究的不是单个项目，而是 **FINOS SecRef Data + OpenGamma Strata + OpenFIGI** 这三个组合，它们分别覆盖了**数据治理、领域模型和标识符映射**三个核心维度。
+如果你的目的不仅是理解业务，而是**设计类似的 Security Master / Instrument Master 系统**，那么真正值得研究的不是单个项目，而是 **FINOS SecRef Data + OpenGamma Strata + OpenFIGI** 这三个组合，它们分别覆盖了**数据治理、领域模型和标识符映射**三个核心维度。
 
 [1]: https://finosfoundation.atlassian.net/wiki/spaces/DT/pages/656834673/Security%2BReference%2BData%2BWG?utm_source=chatgpt.com "Security Reference Data Project - Data Technologies - Confluence"
 [2]: https://github.com/finos?utm_source=chatgpt.com "The Fintech Open Source Foundation (www.finos.org) · GitHub"
